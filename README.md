@@ -1,1 +1,1 @@
-# io-gr3
+# Aplikacja do nauki języków - projekt IO.
