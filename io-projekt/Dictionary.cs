@@ -23,4 +23,12 @@ public class Dictionary
             entries.Add(e);
         }
     }
+
+    public void ShowDictionary()
+    {
+        foreach (Entry e in entries)
+        {
+            Console.WriteLine(e.polishWord + ' ' + e.englishWord);
+        }
+    }
 }
