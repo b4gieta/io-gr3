@@ -1,12 +1,14 @@
 ﻿using System;
+
 Console.WriteLine("Witaj użytkowniku");
 //WCZYTANIE FISZEK I SŁOWNIKA//
+Dictionary dictionary = new Dictionary(@"dictionary.txt");
 bool t = true;
 while (t)
 {
     Console.WriteLine("Wybierz opcję");
     //PO DODANIU FUNKCJI DODAĆ ODWOŁANIA DO NICH//
-    Console.WriteLine("1 - - - Opcja 1");
+    Console.WriteLine("1 - - - Wyświetl słownik");
 Console.WriteLine("2 - - - Opcja 2");
     Console.WriteLine("3 - - - Opcja 3");
 Console.WriteLine("4 - - - Wyjdź");
@@ -15,7 +17,8 @@ Console.WriteLine("4 - - - Wyjdź");
     {
         case "1":
 
-            Console.WriteLine("WYWOŁANIE FUNKCJI 1");
+          
+            dictionary.ShowDictionary();
             break;
         case "2":
 
