@@ -31,4 +31,19 @@ public class Dictionary
             Console.WriteLine(e.polishWord + ' ' + e.englishWord);
         }
     }
+
+    public void DeleteFromDictionary(string word)
+    {
+        foreach (Entry e in entries)
+        {
+            if (e.polishWord == word || e.englishWord == word)
+                entries.Remove(e);
+        }
+    }
+
+    public void AddToDictionary(string polishWord, string englishWord)
+    {
+        entries.Add(new Entry(polishWord, englishWord));
+        Console.WriteLine("Pomyslnie dodano slowo do slownika!");
+    }
 }
