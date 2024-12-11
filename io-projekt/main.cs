@@ -13,9 +13,14 @@ Console.WriteLine("4 - - - Wyjdź");
     string n = Console.ReadLine();
     switch (n)
     {
+<<<<<<< Updated upstream
         case "1":
 
             Console.WriteLine("WYWOŁANIE FUNKCJI 1");
+=======
+        case "1":          
+            dictionary.ShowDictionary();
+>>>>>>> Stashed changes
             break;
         case "2":
 
