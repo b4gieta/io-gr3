@@ -1,6 +1,4 @@
-﻿using System;
-
-Console.WriteLine("Witaj użytkowniku");
+﻿Console.WriteLine("Witaj użytkowniku");
 //WCZYTANIE FISZEK I SŁOWNIKA//
 Dictionary dictionary = new Dictionary(@"dictionary.txt");
 bool t = true;
@@ -19,7 +17,9 @@ while (t)
             dictionary.ShowDictionary();
             break;
         case "2":
-            Entry e = dictionary.entries[0];
+            Random rnd = new Random();
+            int i = rnd.Next(0, dictionary.entries.Count());
+            Entry e = dictionary.entries[i];
             bool result = Exercise.Translate(e);
             if (result) Console.WriteLine("Brawo!");
             else Console.WriteLine("Skill issue");
