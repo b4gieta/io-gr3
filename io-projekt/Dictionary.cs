@@ -32,13 +32,9 @@ public class Dictionary
         }
     }
 
-    public void DeleteFromDictionary(string word)
+    public void DeleteFromDictionary(string Word)
     {
-        foreach (Entry e in entries)
-        {
-            if (e.polishWord == word || e.englishWord == word)
-                entries.Remove(e);
-        }
+        entries.RemoveAll(entry => entry.polishWord == Word || entry.englishWord == Word);
     }
 
     public void AddToDictionary(string polishWord, string englishWord)
