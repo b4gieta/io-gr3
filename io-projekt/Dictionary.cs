@@ -40,6 +40,6 @@ public class Dictionary
     public void AddToDictionary(string polishWord, string englishWord)
     {
         entries.Add(new Entry(polishWord, englishWord));
-        Console.WriteLine("Pomyslnie dodano slowo do slownika!");
+        Console.WriteLine("Pomyślnie dodano słowo do słownika!");
     }
 }
