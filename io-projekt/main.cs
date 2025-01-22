@@ -1,5 +1,6 @@
 ﻿Console.WriteLine("Witaj użytkowniku");
-//WCZYTANIE FISZEK I SŁOWNIKA//
+//WCZYTANIE FISZEK I SŁOWNIKA//\
+Points points = new Points();
 Dictionary dictionary = new Dictionary(@"dictionary.txt");
 bool t = true;
 while (t)
@@ -21,8 +22,17 @@ while (t)
             int i = rnd.Next(0, dictionary.entries.Count());
             Entry e = dictionary.entries[i];
             bool result = Exercise.Translate(e);
-            if (result) Console.WriteLine("Brawo!");
-            else Console.WriteLine("Skill issue");
+            if (result)
+            {
+                points.AddPoints();
+                Console.WriteLine("Brawo, dodano punkt!");
+            }
+            else
+            {
+                points.SubstractPoints();
+                Console.WriteLine("Skill issue, odejmujemy punkt!");
+            }
+                
             break;
         case "3":
             {
