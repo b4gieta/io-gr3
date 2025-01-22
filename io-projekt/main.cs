@@ -1,16 +1,15 @@
 ﻿Console.WriteLine("Witaj użytkowniku");
-//WCZYTANIE FISZEK I SŁOWNIKA//\
 Points points = new Points();
 Dictionary dictionary = new Dictionary(@"dictionary.txt");
 bool t = true;
 while (t)
 {
     Console.WriteLine("Wybierz opcję");
-    //PO DODANIU FUNKCJI DODAĆ ODWOŁANIA DO NICH//
     Console.WriteLine("1 - - - Wyświetl słownik");
     Console.WriteLine("2 - - - Wykonaj ćwiczenie");
-    Console.WriteLine("3 - - - Opcja 3");
-    Console.WriteLine("4 - - - Wyjdź");
+    Console.WriteLine("3 - - - Zmodyfikuj słownik");
+    Console.WriteLine("4 - - - Zresetuj postępy");
+    Console.WriteLine("5 - - - Wyjdź");
     string n = Console.ReadLine();
     switch (n)
     {
@@ -57,6 +56,10 @@ while (t)
                 break;
             }
         case "4":
+            points.ResetPoints();
+            Console.WriteLine("Pomyślnie zresetowano postępy!");
+            break;
+        case "5":
             Console.WriteLine("Do widzenia");
             t = false;
             break;
