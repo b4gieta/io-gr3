@@ -38,7 +38,7 @@ while (t)
             {
                 Console.WriteLine("1 - - - Dodaj słowo");
                 Console.WriteLine("2 - - - Usuń słowo");
-               string m = Console.ReadLine();
+                string m = Console.ReadLine();
                 if (m == "1")
                 {
 
