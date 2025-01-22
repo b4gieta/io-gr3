@@ -25,8 +25,27 @@ while (t)
             else Console.WriteLine("Skill issue");
             break;
         case "3":
-            Console.WriteLine("WYWOŁANIE FUNKCJI 3");
-            break;
+            {
+                Console.WriteLine("1 - - - Dodaj słowo");
+                Console.WriteLine("2 - - - Usuń słowo");
+               string m = Console.ReadLine();
+                if (m == "1")
+                {
+
+                    Console.WriteLine("Podaj słowo polskie");
+                    string Word_polish = Console.ReadLine();
+                    Console.WriteLine("Podaj słowo angielskie");
+                    string Word_english = Console.ReadLine();
+
+                    dictionary.AddToDictionary(Word_polish, Word_english);
+                }
+                else
+                {
+                    string Word = Console.ReadLine();
+                    dictionary.DeleteFromDictionary(Word);
+                }
+                break;
+            }
         case "4":
             Console.WriteLine("Do widzenia");
             t = false;
